@@ -1,0 +1,69 @@
+body {
+  height: 100%;
+  font-family: Comic Sans MS;
+  background-image: url(img/fondo-espacio.jpg);
+}
+  
+h1 {
+  color: white;
+  border: solid salmon;
+  transform: rotate(10deg);
+  text-shadow: 2px 2px 2px rgb(240, 10, 10);
+  box-shadow: 5px 5px 5px rgb(19, 31, 196);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.planeta { 
+  animation-name: planeta;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.planeta, .tierra {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);
+  } 
+  to {transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);
+  } 
+  to {-webkit-transform: rotate(360deg);
+  }
+}
+
+.planeta, .tierra {
+  -webkit-animation: 10s rotate linear infinite;
+  animation: 10s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.luna {
+  animation-name: luna;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes luna {
+  100% {
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
